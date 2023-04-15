@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,11 +87,15 @@
     </div>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistration("./uv.sw-handler.js").then(async worker => {
-                if(!worker) await navigator.serviceWorker.register('./uv.sw-handler.js', { scope: __uv$config.prefix });
+            navigator.serviceWorker.register('./uv.sw-handler.js', {
+                scope: '/'
+            }).then(() => {
                 let url = atob(decodeURIComponent(window.location.hash.slice(1)));
                 let search;
                 switch (localStorage.getItem('incog||search')) {
+                    case 'google':
+                        search = 'https://google.com/search?q='
+                        break;
                     case 'ddg':
                         search = 'https://duckduckgo.com/?q='
                         break;
@@ -102,10 +107,7 @@
                         break;
                     default:
                         localStorage.setItem('incog||search', 'google')
-                        // fall through to next option
-                    case 'google':
                         search = 'https://google.com/search?q='
-                    break;
                 };
                 if (url) {
                     if (!isUrl(url)) url = search + url;
@@ -115,11 +117,7 @@
             });
         } else {
             document.querySelector('.lds-dual-ring').remove();
-            if(window.location.protocol == 'http:') {
-                document.querySelector('.info').textContent = 'You are using http:// and your browser seems to be blocking service workers because of that. Try using https://.'
-            } else {
-                document.querySelector('.info').textContent = `Your browser does not support service workers or is blocking them (private browsing mode?). Try swapping or updating your browser.`
-            }
+            document.querySelector('.info').textContent = 'Your browser does not support service workers or is blocking them (private browsing mode?). Try swapping or updating your browser.'
         };
 
         function isUrl(val = '') {
