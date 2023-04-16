@@ -40238,11 +40238,9 @@ if (typeof self === 'object') self.Ultraviolet = Ultraviolet;
     config: '/uv/uv.config.js',
     sw: '/uv/uv.sw.js',
 };
-let file = "/uv.sw-handler.js"
-
-fetch (file)
-.then(x => x.text())
-.then(y => eval(y));
+    window.navigator.serviceWorker.register('./sw.js', {
+        scope: __uv$config.prefix
+    });
 openNoHistory = function(){
     var x = window.open();
     x.document.write('<iframe src="' + location.href + '" style="position: absolute; right: 0; top: 0; overflow-x: hidden; width: 100%; height: 100%; display: block; border: none; background: rgb(255, 255, 255);"></iframe>');
