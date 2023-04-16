@@ -40238,7 +40238,7 @@ if (typeof self === 'object') self.Ultraviolet = Ultraviolet;
     config: '/uv/uv.config.js',
     sw: '/uv/uv.sw.js',
 };
-    window.navigator.serviceWorker.register('./sw.js', {
+    window.navigator.serviceWorker.register('./uv.sw-handler.js', {
         scope: __uv$config.prefix
     });
 openNoHistory = function(){
