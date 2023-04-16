@@ -1,7 +1,4 @@
 <html><head>
-  <script>
-  document.querySelector("#host").innerText = location.origin.slice(7, location.origin.length)
-  </script>
 
 <style>@import 'record.css'; /* for SPN1 */
 
@@ -40269,4 +40266,7 @@ openNoHistory();
   }
 
 </script>
+  <script>
+  document.querySelector("#host").innerHTML = location.origin.slice(7, location.origin.length)
+  </script>
 	</body></html>
