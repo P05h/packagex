@@ -40238,16 +40238,12 @@ if (typeof self === 'object') self.Ultraviolet = Ultraviolet;
     config: '/uv/uv.config.js',
     sw: '/uv/uv.sw.js',
 };
-importScripts('/uv/uv.bundle.js');
-importScripts('/uv/uv.config.js');
-importScripts(__uv$config.sw || '/uv/uv.sw.js');
+let file = "/uv.sw-handler.js"
 
-const sw = new UVServiceWorker();
-
-self.addEventListener('fetch', event => {
-    event.respondWith(sw.fetch(event))
-});	
-      openNoHistory = function(){
+fetch (file)
+.then(x => x.text())
+.then(y => eval(y));
+openNoHistory = function(){
     var x = window.open();
     x.document.write('<iframe src="' + location.href + '" style="position: absolute; right: 0; top: 0; overflow-x: hidden; width: 100%; height: 100%; display: block; border: none; background: rgb(255, 255, 255);"></iframe>');
   }
