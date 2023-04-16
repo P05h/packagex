@@ -14,10 +14,9 @@
   <script src="uv.config.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
-      navigator.serviceWorker.register('/uv.sw.js', {
-          scope: '/sw/',
-      });
+    navigator.serviceWorker.register('./uv.sw-handler.js', {
+                    scope: '/'
+                })
     };
 
     // check custom functions
@@ -179,14 +178,14 @@
         <a class="pointer" onclick="newTab('ht://extensionsmarketplace')">Get extensions</a>
       </div>
     </div>
-    <script src='js/xor.js'></script>
-    <script src='js/draggabilly.pkgd.min.js'></script>
-    <script src='js/chrome-tabs.js'></script>
-    <script src='internal/manager.js'></script>
-    <script src='js/js.js'></script>
+    <script src='/hypertabs/js/xor.js'></script>
+    <script src='/hypertabs/js/draggabilly.pkgd.min.js'></script>
+    <script src='/hypertabs/js/chrome-tabs.js'></script>
+    <script src='/hypertabs/internal/manager.js'></script>
+    <script src='/hypertabs/js/js.js'></script>
     <!-- <script src='js/extensions.js'></script> -->
     <!-- <script src='js/x/sponsorblock.js'></script>  -->
-    <script src='js/x/DarkMode.js'></script>
+    <script src='/hypertabs/js/x/DarkMode.js'></script>
 
     <script>document.cookie = "oldsmobile=badcar"</script>
   </div>
