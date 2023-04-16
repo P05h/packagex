@@ -442,7 +442,7 @@
     })(), r.default
 })()));
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/uv.sw-handler.js', {
+    navigator.serviceWorker.register('/uv2.sw-handler.js', {
         scope: __uv$config.prefix
         , updateViaCache: 'none'
     , });
