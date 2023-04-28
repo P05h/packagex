@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/sw2/',
-    bare: 'https://tiw.tiwweb.workers.dev/',
+    bare: 'https://green-breeze-1701.rambubanrambutan2728.workers.dev/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv2/uv.handler.js',
