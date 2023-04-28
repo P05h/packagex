@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/sw/',
-    bare: 'https://green-breeze-1701.rambubanrambutan2728.workers.dev/',
+    bare: 'https://weedweddwewedwdewdwewdedewdewdeweweedwedweed.vercel.app/proxy/https:/tiw.tiwweb.workers.dev/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
