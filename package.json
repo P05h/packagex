@@ -1,42 +1,23 @@
 {
-  "name": "incognito",
+  "name": "nodeunblocker.com",
+  "description": "Web proxy for evading internet censorship",
+  "author": "Nathan Friedly - http://nfriedly.com",
   "version": "1.0.0",
-  "description": "Unofficial Incognito easy deployment version with TompHTTP bare server included.",
-  "type": "module",
-  "scripts": {
-    "start": "node src/index.js",
-    "install-webretro-linux": "chmod u+x ./src/webretro.sh && ./src/webretro.sh",
-    "install-webretro-win": "echo \"Error: not finshed\" && exit 1"
-  },
-  "files": [
-    "static",
-    "src",
-    "ssl",
-    ".gitignore",
-    "app.json"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amethystnetwork-dev/Incognito"
-  },
-  "keywords": [
-    "unoffical",
-    "ultraviolet",
-    "unblock",
-    "titaniumnetwork",
-    "bypass-filter",
-    "amethystnetwork-dev"
-  ],
-  "author": "",
-  "license": "GPL-3.0-or-later",
+  "private": true,
+  "homepage": "https://github.com/nfriedly/nodeunblocker.com/",
   "dependencies": {
-    "@titaniumnetwork-dev/ultraviolet": "^1.0.11",
-    "@tomphttp/bare-server-node": "^1.2.5",
-    "connect": "^3.7.0",
-    "serve-static": "^1.15.0"
+    "express": "^4.13.0",
+    "gatling": "^2.0.0",
+    "newrelic": "^1.20.2",
+    "through": "^2.3.8",
+    "unblocker": "^2.2.0",
+    "ytdl-core": "^4.5.0"
   },
   "engines": {
-    "npm": ">=8.0.0",
-    "node": ">=18.0.0"
-  }
+    "node": ">=6"
+  },
+  "scripts": {
+    "start": "gatling app.js"
+  },
+  "license": "AGPL-3.0"
 }

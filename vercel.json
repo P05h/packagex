@@ -1,7 +1,14 @@
 {
-  "name": "generalmathsmod",
-  "buildCommand": "echo COMPLETED",
-  "installCommand": "npm install",
-  "outputDirectory": "static",
-  "cleanUrls": true
+    "builds": [
+        {
+            "src": "app.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "app.js"
+        }
+      ]
 }
