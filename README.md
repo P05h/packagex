@@ -14,4 +14,4 @@ It has more varieties...
 
 Posh presents you with the all new packaged unblocker!!!!!!!!!!!!!!!
 
-Built in bare, and proxies you used to only be able to deploy with heroku an dreplit. Now you can deploy with vercel!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Built in bare, and proxies you used to only be able to deploy with heroku and replit. Now you can deploy with vercel!!!!!!!!!!!!!!!!!!!!!!!!!!!
